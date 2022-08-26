@@ -36,6 +36,9 @@ body {
 .col-3-9 {
     width: 33%;
 }
+.col-6-9 {
+    width: 66%;
+}
 [class*="col-"] {
     float: left;
     padding-left: 15px;
