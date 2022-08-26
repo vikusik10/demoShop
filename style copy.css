@@ -12,7 +12,7 @@ body {
     padding-right: 15px;
     margin: 0 auto;
 }
-.row::after, .menu::after, .inmenu::after, .choice::after, .products::after, .row-main::after, .img-out::after {
+.row::after, .menu::after, .inmenu::after, .choice::after, .products::after, .row-main::after, .img-out::after, image::after {
     content: "";
     display: block;
     clear: both;
@@ -242,10 +242,18 @@ input::placeholder {
  .image {
     width: 100px;
     margin: auto;
-   top: 0;
-   bottom: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    vertical-align: middle;
 }
-.rame img, .heart img {
+.image img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.rame , .heart  {
     border: 1px solid #2c71b8;
     position: absolute;
     width: 28px;
@@ -253,10 +261,10 @@ input::placeholder {
     right: 9px;
     padding: 4px;
 }
-.rame img {
+.rame  {
     top: 9px;
 }
-.heart img {
+.heart {
     top: 50px;
 }
 .products {
@@ -281,6 +289,9 @@ span.type {
     margin-top: 30px;
     font-size: 21px;
     font-weight: bold;
+}
+.details, .add {
+    text-align: center;
 }
 .add button {
     background-color: rgba(255, 255, 255, 0.25);
