@@ -12,7 +12,7 @@ body {
     padding-right: 15px;
     margin: 0 auto;
 }
-.row::after, .menu::after, .inmenu::after, .choice::after, .products::after, .row-main::after, .img-out::after, image::after {
+.row::after, .menu::after, .inmenu::after, .filter::after, .products::after, .row-main::after, .img-out::after, image::after {
     content: "";
     display: block;
     clear: both;
@@ -33,11 +33,11 @@ body {
 .col-3 {
     width: 25%;
 }
-.col-3-9 {
-    width: 33%;
+.col-4 {
+    width: 33.33333%;
 }
-.col-6-9 {
-    width: 66%;
+.col-8 {
+    width: 66.66667%;
 }
 [class*="col-"] {
     float: left;
@@ -74,10 +74,19 @@ body {
 }
 .pro{
     position: relative;
+    background-image: url("images/down_icon.png");
+    background-position: right 5% top 50%;
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
 }
 .inmenu {
     position: absolute;
     display: none; 
+    left: -1px;
+}
+.pro:hover > a {
+    background-color: #2c71b8;
+    color: white;
 }
 .pro:hover .inmenu {
     display: block;
@@ -104,16 +113,19 @@ body {
 .form-search-header input {
     border: none;
     background-color: transparent;
-    height: 15px;
-    margin: 15px;
-    width: 70px;
+    height: 30px; 
+    margin-right: 15px;
+    margin-left: 15px;
     font-size: 21px;
     font-weight: lighter;
+    width: 124px;
 }
 .form-search-header {
     border: 1px solid #2c71b8;
     display: inline-block;
     position: relative;
+    height: 40px;
+    width: 200px;
 }
 input::placeholder {
     color: #2c71b8;
@@ -154,36 +166,42 @@ input::placeholder {
     text-align: center;
     line-height: 20px;
 }
-.leftcol {
+
+.slider {
+    height: 400px;
+    background-color: #2c71b8;
+    border: 1px solid #ffffff;
+}
+
+.filter {
     background-color: rgba(255, 255, 255, 0.25);
     color: white;
-    border-top: 1px solid #ffffff;
     border-right: 1px solid #ffffff;
     padding-left: 30px;
     font-size: 21px;
 }
-.choice p{
+.filter p{
     font-weight: bold;
     margin-bottom: -3px;
+    padding-left: 4px;
 }
-.choice input {
-    margin-right: 10px;
-    margin-top: 30px;
+.filter input {
+    margin: 25px 12px 0px 0px;
 }
-.device-type {
-    margin-top: 33px;
+.filter-device-type {
+   padding-top: 33px;
 }
-.color, .ram {
+.filter-color, .filter-ram {
     margin-top: 65px;
 }
-.more-options a {
+.filter-more-options a {
     text-decoration: none;
     color: #ffffff;
 }
-.more-options {
+.filter-more-options {
     margin-top: 30px;
 }
-.submit {
+.filter > button {
     background-color: #2c71b8;
     color: #ffffff;
     border: 1px solid #ffffff;
@@ -191,16 +209,17 @@ input::placeholder {
     margin-top: 30px;
     width: 90%;
     height: 50px;
-    font-size: bold;
+    font-weight: bold;
+    font-weight: 21px;
 }
-.way, .way a{
+.breadcrumbs, .breadcrumbs a{
     color: #96b8dc;
     font-size: 14px;
     text-decoration: none;
     margin-top: 30px;
     margin-bottom: 30px;
 }
-.way a:last-child {
+.breadcrumbs a:last-child {
     text-decoration: underline;
 }
 #sort {
@@ -211,49 +230,57 @@ input::placeholder {
     font-size: 21px;
     height: 40px;
 }
-.name > h2 {
+.name-of-page {
     color: white;
     font-size: 48px;
     font-weight: bold;
 }
-.computer {
+.product {
     border: 1px solid #ffffff;
     color: white;
     margin-bottom: 30px;
-    margin-left: 30px;
+    margin-top: 50px;
 }
-.computer > h3 {
-    font-weight: bold;
+.product-title {
     font-size: 30px;
-}
-.computer >h3, p {
-    padding-left: 15px;
+    font-weight: bold;
     padding-top: 15px;
+    padding-left: 15px;
 }
-.computer > p {
-    font-weight: lighter;
+.product-description, .product-features {
+    padding-left: 15px;
+    padding-top: 20px;
     font-size: 21px;
 }
-.img-out {
+.product-features > span {
+    text-transform: uppercase;
+    font-size: 21px;
+    font-weight: bold;
+}
+.product-price {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 25px;
+}
+.product-price > span {
+    vertical-align: super;
+    font-size: 35px;
+}
+.product-image {
     background-color: rgba(255, 255, 255, 0.75);
     height: 180px;
     position: relative;
+    margin: 0;
+    padding: 10px;
 }
- .image {
-    width: 100px;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    height: 100%;
-    vertical-align: middle;
-}
-.image img {
+.product-image > img {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
-.rame , .heart  {
+.zoom , .like {
     border: 1px solid #2c71b8;
     position: absolute;
     width: 28px;
@@ -261,16 +288,13 @@ input::placeholder {
     right: 9px;
     padding: 4px;
 }
-.rame  {
+.zoom {
     top: 9px;
 }
-.heart {
+.like {
     top: 50px;
-}
-.products {
-    margin-top: 50px;
-}
-span.type {
+} 
+/* span.type {
     font-weight: bold;
 }
 .price {
@@ -278,33 +302,38 @@ span.type {
     font-weight: bold;
     text-align: center;
     margin-top: 35px;
-}
-.details button {
+} */
+.product-button-more {
     border: 1px solid white;
     background-color: #2c71b8;
     color: white;
     width: 210px;
     margin: auto;
     height: 50px;
-    margin-top: 30px;
+    margin-top: 30px; 
     font-size: 21px;
     font-weight: bold;
 }
-.details, .add {
+.product-button{
     text-align: center;
 }
-.add button {
+.product-button-add {
     background-color: rgba(255, 255, 255, 0.25);
     border: 1px solid white;
     color: white;
     width: 210px;
     height: 50px;
     margin-top: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 30px; 
     font-size: 21px;
     font-weight: bold;
+    position: relative;
 }
-
+.product-button-add > img {
+    position: absolute;
+    right: 15px;
+    bottom: 17px;
+}
 .load-more {
     text-align: center;
     margin-top: 40px;
@@ -314,8 +343,7 @@ span.type {
     color: white;
     font-size: 36px;
     text-decoration: none;
-}
-.slide {
-    height: 400px;
-    background-color: aliceblue;
-}
+}  
+
+
+
