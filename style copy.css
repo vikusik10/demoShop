@@ -271,8 +271,9 @@ input::placeholder {
     background-color: rgba(255, 255, 255, 0.75);
     height: 180px;
     position: relative;
-    margin: 0;
+    margin: -1px;
     padding: 10px;
+    border: 1px solid #ffffff;
 }
 .product-image > img {
     position: absolute;
@@ -290,20 +291,30 @@ input::placeholder {
 }
 .zoom {
     top: 9px;
+    background-image: url("images/zoom.png");
+    background-repeat: no-repeat;
+    background-position: top 50% left 50%;
+}
+.zoom:hover {
+    background-color: #2c71b8;
+    background-image: url("images/zoomw.png");
+    background-repeat: no-repeat;
+    background-position: top 50% left 50%;
 }
 .like {
     top: 50px;
+    background-image: url("images/like.png");
+    background-repeat: no-repeat;
+    background-position: top 50% left 50%;
 } 
-/* span.type {
-    font-weight: bold;
+.like:hover {
+    background-color: #2c71b8;
+    background-image: url("images/likew.png");
+    background-repeat: no-repeat;
+    background-position: top 50% left 50%;
 }
-.price {
-    font-size: 48px;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 35px;
-} */
-.product-button-more {
+
+.product-button-more, .product-button-add {
     border: 1px solid white;
     background-color: #2c71b8;
     color: white;
@@ -318,17 +329,15 @@ input::placeholder {
     text-align: center;
 }
 .product-button-add {
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 30px; 
+}
+.product-button-add:hover, .product-button-more:hover {
     background-color: rgba(255, 255, 255, 0.25);
     border: 1px solid white;
     color: white;
-    width: 210px;
-    height: 50px;
-    margin-top: 15px;
-    margin-bottom: 30px; 
-    font-size: 21px;
-    font-weight: bold;
-    position: relative;
-}
+} 
 .product-button-add > img {
     position: absolute;
     right: 15px;
