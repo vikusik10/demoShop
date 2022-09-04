@@ -112,14 +112,14 @@ body {
 }
 .form-search-header input {
     border: none;
-    display:inline-block;
+    float: left;
     background-color: transparent;
     height: 30px; 
-    margin-right: 15px;
-    margin-left: 15px;
+    padding-left: 15px;
     font-size: 21px;
+    vertical-align: middle;
     font-weight: lighter;
-    width: 124px;
+    width: 78%;
 }
 .form-search-header {
     border: 1px solid #2c71b8;
@@ -196,18 +196,28 @@ label::before {
     height: 8px;
     border: 1px solid white;
     cursor: pointer;
-    margin-right: 0px;
+    position: absolute;
+    top: 8px;
 }
 label {
-    cursor: pointer;
+    position: relative;
+    margin-left: 20px;
     margin-top: 28px;
+    padding-bottom: 25px;
+    cursor: pointer;
     display: inline;
 }
-input[type="checkbox"]:checked + label::before {
+input[type="checkbox"]:checked + label::before{
     background-color: white;
 }
+.filter-label {
+    padding-bottom: 23px;
+}
+.filter  p {
+    margin-bottom: 28px;
+}
 .filter input {
-    margin: 25px 12px 0px 0px;
+    margin: 30px 12px 0px 0px;
 }
 .filter-device-type {
    padding-top: 33px;
@@ -232,6 +242,11 @@ input[type="checkbox"]:checked + label::before {
     height: 50px;
     font-weight: bold;
     font-weight: 21px;
+}
+.filter > button:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 1px solid white;
+    color: white;
 }
 .breadcrumbs, .breadcrumbs a{
     color: #96b8dc;
