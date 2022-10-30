@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop project</title>
     <link rel="stylesheet" href="reset.css">
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="style copy.css">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+      
 </head>
 <body>
     <header class="header">
@@ -51,14 +57,24 @@
                     </div></form>
                     <div class="col-3">
                     <div class="basket"><img src="images/basket.png" alt="">
-                        <div class="number">4</div></div>
+                        <div class="product-count" id="products-count">0</div></div>
                     </div>
                   </div> 
                 </div>
             </div>
         </div>
     </header>
-    <div class="slider">Slide#2</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="slider">
+                    <div>Slide #1</div>
+                    <div>Slide #2</div>
+                    <div>Slide #3</div>
+                  </div>
+            </div>
+        </div>
+    </div>
     <main class="main">
         <div class="container">
             <div class="row">
@@ -155,7 +171,7 @@
                                 <div class="product-image">
                                     <img src="images/computer.png" alt="">
                                     <div class="zoom"></div>
-                                    <div class="like"></div>
+                                    <div class="like liked"></div>
                                 </div>
                                 <div class="product-title">#1 Device Name</div>
                                 <div class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
@@ -163,6 +179,11 @@
                                 <div class="product-features"><span>Screen size: </span>7 inches</div>
                                 <div class="product-features"><span>Ram: </span>1 GB</div>
                                 <div class="product-price">$599 <span>25</span></div>
+                                <div class="product-quantity">
+                                    <button class="decrement">-</button>
+                                    <input type="text" value="1" readonly>
+                                    <button class="increment">+</button>
+                                </div>
                                 <div class="product-button">
                                     <button class="product-button-more">More Details</button>
                                     <button class="product-button-add">Add to cart <img src="images/cart.png" alt=""></button>
@@ -182,6 +203,11 @@
                                 <div class="product-features"><span>Screen size: </span>7 inches</div>
                                 <div class="product-features"><span>Ram: </span>1 GB</div>
                                 <div class="product-price">$1250 <span>99</span></div>
+                                <div class="product-quantity">
+                                    <button class="decrement">-</button>
+                                    <input type="text" value="1" readonly>
+                                    <button class="increment">+</button>
+                                </div>
                                 <div class="product-button">
                                     <button class="product-button-more">More Details</button>
                                     <button class="product-button-add">Add to cart <img src="images/cart.png" alt=""></button>
@@ -201,6 +227,11 @@
                                 <div class="product-features"><span>Screen size: </span>7 inches</div>
                                 <div class="product-features"><span>Ram: </span>1 GB</div>
                                 <div class="product-price">$399 <span>50</span></div>
+                                <div class="product-quantity">
+                                    <button class="decrement">-</button>
+                                    <input type="text" value="1" readonly>
+                                    <button class="increment">+</button>
+                                </div>
                                 <div class="product-button">
                                     <button class="product-button-more">More Details</button>
                                     <button class="product-button-add">Add to cart <img src="images/cart.png" alt=""></button>
@@ -220,6 +251,11 @@
                                 <div class="product-features"><span>Screen size: </span>7 inches</div>
                                 <div class="product-features"><span>Ram: </span>1 GB</div>
                                 <div class="product-price">$599 <span>25</span></div>
+                                <div class="product-quantity">
+                                    <button class="decrement">-</button>
+                                    <input type="text" value="1" readonly>
+                                    <button class="increment">+</button>
+                                </div>
                                 <div class="product-button">
                                     <button class="product-button-more">More Details</button>
                                     <button class="product-button-add">Add to cart <img src="images/cart.png" alt=""></button>
@@ -239,6 +275,11 @@
                                 <div class="product-features"><span>Screen size: </span>7 inches</div>
                                 <div class="product-features"><span>Ram: </span>1 GB</div>
                                 <div class="product-price">$1250 <span>99</span></div>
+                                <div class="product-quantity">
+                                    <button class="decrement">-</button>
+                                    <input type="text" value="1" readonly>
+                                    <button class="increment">+</button>
+                                </div>
                                 <div class="product-button">
                                     <button class="product-button-more">More Details</button>
                                     <button class="product-button-add">Add to cart <img src="images/cart.png" alt=""></button>
@@ -258,6 +299,11 @@
                                 <div class="product-features"><span>Screen size: </span>7 inches</div>
                                 <div class="product-features"><span>Ram: </span>1 GB</div>
                                 <div class="product-price">$399 <span>50</span></div>
+                                <div class="product-quantity">
+                                    <button class="decrement">-</button>
+                                    <input type="text" value="1" readonly>
+                                    <button class="increment">+</button>
+                                </div>
                                 <div class="product-button">
                                     <button class="product-button-more">More Details</button>
                                     <button class="product-button-add">Add to cart <img src="images/cart.png" alt=""></button>
@@ -277,6 +323,11 @@
                                 <div class="product-features"><span>Screen size: </span>7 inches</div>
                                 <div class="product-features"><span>Ram: </span>1 GB</div>
                                 <div class="product-price">$599 <span>25</span></div>
+                                <div class="product-quantity">
+                                    <button class="decrement">-</button>
+                                    <input type="text" value="1" readonly>
+                                    <button class="increment">+</button>
+                                </div>
                                 <div class="product-button">
                                     <button class="product-button-more">More Details</button>
                                     <button class="product-button-add">Add to cart <img src="images/cart.png" alt=""></button>
@@ -296,6 +347,11 @@
                                 <div class="product-features"><span>Screen size: </span>7 inches</div>
                                 <div class="product-features"><span>Ram: </span>1 GB</div>
                                 <div class="product-price">$1250 <span>99</span></div>
+                                <div class="product-quantity">
+                                    <button class="decrement">-</button>
+                                    <input type="text" value="1" readonly>
+                                    <button class="increment">+</button>
+                                </div>
                                 <div class="product-button">
                                     <button class="product-button-more">More Details</button>
                                     <button class="product-button-add">Add to cart <img src="images/cart.png" alt=""></button>
@@ -315,6 +371,11 @@
                                 <div class="product-features"><span>Screen size: </span>7 inches</div>
                                 <div class="product-features"><span>Ram: </span>1 GB</div>
                                 <div class="product-price">$399 <span>50</span></div>
+                                <div class="product-quantity">
+                                    <button class="decrement">-</button>
+                                    <input type="text" value="1" readonly>
+                                    <button class="increment">+</button>
+                                </div>
                                 <div class="product-button">
                                     <button class="product-button-more">More Details</button>
                                     <button class="product-button-add">Add to cart <img src="images/cart.png" alt=""></button>
@@ -331,6 +392,33 @@
             </div>
         </div>
     </main>
-    <footer class="footer">Footer</footer>
+    <footer class="footer">
+        <div class="row">
+            <div class="col-12">
+                <p>&#169 Copyright 2017</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal">
+        <div class="modal-block">
+            <form action="">
+                <div class="btn-close">X</div>
+                <h3>Please call for more details</h3>
+                <div class="form-field">
+                    <input type="text" placeholder="Your name">
+                </div>
+                <div class="form-field"><input type="text" placeholder="Your phone"></div>
+                <button>Please call</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
